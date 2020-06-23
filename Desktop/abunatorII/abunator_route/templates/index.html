@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<import setters>
+
+    <head>
+        <!-- headのコードを変える -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=maximum-scale">
+        <!-- <link rel="stylesheet" href="{{url_for('static', filename='css/index.css') }}"> -->    
+        <!-- <meta http-equiv="Content-Type" content="text/html; charset=windows-31j"> -->
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/index.css') }}">
+        <link rel="shortcut icon" href="templates\favicon.ico" type="image/vnd.microsoft.icon">
+        <title>abunator</title>
+    </head>
+
+    <body>
+        <div id="wrap">
+
+            <!-- 図鑑へのリンクは下に行きました。 -->
+            <!--<a href="/pic_book" class="picture_book">図鑑へのリンク</a> -->
+
+            
+
+            <div id="main">
+                <h1 class="f-big">ABUNATOR</h1>
+
+                <a href = "/main/{{key}}" class="start">START</a>
+                <!--<form method = 'POST' action = '/'>
+                    <input type = "hidden" name = "start" value = 1>
+                    <input type = "submit" value = "START" class = "button">
+                </form>
+                -->
+
+                <!-- 前回の結果表示 -->
+                <br><br>
+                <p class = "lastresult">前回の結果：<a href = "/refer/{{key}}" class = "lastresult">{{name}}</a>
+                <br><br>
+                <br><br>
+                <!-- 図鑑へのリンク -->
+                <a href="/zukan/{{key}}" class="picture_book">図鑑を見る</a>
+
+                <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <!-- 画面の下に十分な余白を入れる改行 -->
+                    
+                    
+                    <br><br><br><br><br><br><br>
+                </ul>
+            </div >
+        </div>
+
+        <!-- 初期化スペース -->
+        <!-- 初期化は別の場所(app.py)でやります -->
+
+    </body>
+
+</import>
+
+</html>

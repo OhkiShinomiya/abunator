@@ -1,0 +1,304 @@
+body {
+	margin: auto;
+    }
+
+#wrap {
+	position: relative;
+	height:100%;
+	background-color: #ffffff;
+	margin: 0 auto;
+	text-align:center;
+	background: radial-gradient(ellipse farthest-corner at center, #F0E34A, #DB1D32);
+}
+
+/*タイトル*/
+h1{
+	color:  #414444;
+	padding-top:200px;
+	font-size:80px;
+}
+
+/*タイトルのネオン設定*/
+.f-big {
+	text-shadow: 0px 0px 80px #ffffff ,/*横方向のずれ、下方向のずれ、ぼかし具合*/
+	0px 0px 20px #ffffff,
+	0px 0px 40px #ffffff,
+	0px 0px 60px #ffffff,
+	0px 0px 80px #ffffff;
+}
+
+/*前回の結果を表示する部分*/
+.lastresult{
+    color:#000000;
+    text-align:center;
+    font-weight:bold;
+}
+
+/*タイトルの最初の文字を赤色指定*/
+.f-big:first-letter{
+	color:#DB1D32;
+}
+
+/*図鑑へのリンク*/
+.picture_book{
+    color:#ffffff;
+	font-size:20px;
+    display: inline-block;
+    width: 150px;
+    height: 100px;
+    line-height: 100px;
+    background: #a80d2a;
+    text-align: center;
+    text-decoration: none;
+}
+
+/*スタートボタンを立体に*/
+.start {
+    font-weight:bold;
+    /*color指定のコードを変更_下記のコメントアウトが元の記述*/
+    /*font-color:#ffffff;*/
+    color:#ffffff;
+	font-size:30px;
+    display: inline-block;
+    width: 150px;
+    height: 100px;
+    line-height: 100px;
+    background: #DB1D32;
+    text-align: center;
+    text-decoration: none;
+    border-bottom: solid 10px #a80d2a;/*ボタン色より暗めに*/
+    border-right: solid 10px #C73E3A;/*ボタン色より暗めに*/
+}
+
+/*ボタンを押したとき*/
+.start:active {
+	border:none;
+	-webkit-transform: translate(6px,6px);/*ボタンを動かすX軸とy軸*/
+	transform: translate(6px,6px);
+}
+
+/*@keyframes rippleEffect {
+    from {
+        transform: scale(1);
+        opacity: 0.45;
+    }
+    to {
+        transform: scale(30);
+        opacity: 0;
+    }
+}*/
+
+a {
+	text-decoration: none ;
+	color:white;
+}
+
+/*カーソルをそえた時*/
+.start:hover {
+	cursor: pointer;
+	cursor: hand;
+	-webkit-animation: scale .3s ease-in-out;
+	animation: scale .3s ease-in-out;
+}
+
+
+
+/*アニメーションの指定*/
+@-webkit-keyframes scale {
+	50% { -webkit-transform: scale(1.1); }
+}
+@keyframes scale {
+	50% { transform: scale(1.1); }
+}
+
+@keyframes my-fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+    opacity: 1;
+    }
+}
+
+#main {
+  /* .boxが「my-fade-in」で状態変化するように指定 */
+    animation-name:     my-fade-in;
+    animation-duration: 3s;
+}
+
+
+.circles{
+    overflow: hidden;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(11){
+    left: 95%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(12){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(13){
+    left: 5%;
+    width: 100px;
+    height: 100px;
+    animation-delay: 5s;
+}
+
+.circles li:nth-child(14){
+    left: 10%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(15){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(16){
+    left: 25%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 5s;
+}
+
+.circles li:nth-child(17){
+    left: 85%;
+    width: 50px;
+    height: 50px;
+    animation-delay: 3s;
+    animation-duration: 30s;
+}
+
+.circles li:nth-child(16){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+    animation-duration:25s;
+}
+
+.circles li:nth-child(16){
+    left: 65%;
+    width: 30px;
+    height: 30px;
+    animation-delay: 5s;
+    animation-duration: 10s;
+}
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0px) rotate(0deg);
+        opacity: 1;
+        border-radius: 0%;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
